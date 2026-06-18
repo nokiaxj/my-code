@@ -338,7 +338,7 @@ generate_config() {
       }
       }
   ],
-  "outbounds": [
+  ###// "outbounds": [
     {
       "type": "direct",
       "tag": "direct",
@@ -357,7 +357,7 @@ generate_config() {
         ],
         "action": "route",
         "invert": true,
-        "outbound": "direct"
+        "outbound": "wg-ep"
       },
       {
         "domain_suffix": [
