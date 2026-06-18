@@ -342,10 +342,61 @@ generate_config() {
     {
       "type": "direct",
       "tag": "direct",
-    },
+    }
+  ]，
+  "route": {
+    "rules": [
+      {
+        "domain_suffix": [
+          "example"
+        ],
+        "ip_version": 4,
+        "network": [
+          "tcp",
+          "udp"
+        ],
+        "action": "route",
+        "invert": true,
+        "outbound": "direct"
+      },
+      {
+        "domain_suffix": [
+          "example"
+        ],
+        "ip_version": 6,
+        "network": [
+          "tcp",
+          "udp"
+        ],
+        "action": "route",
+        "outbound": "wg-ep"
+      }
+    ]
+  },
+  "endpoints": [
     {
-      "type": "block",
-      "tag": "block"
+      "type": "wireguard",
+      "tag": "wg-ep",
+      "system": false,
+      "name": "wg0",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32"
+		"2606:4700:110:8e62:2f62:eb69:3d97:c6a5/128"
+      ],
+      "private_key": "wBBUpigxbXdv8NGRLHD0BnMfBhHlfujf9s8/BG8BLVo=",
+      "peers": [
+        {
+          "address": "162.159.192.1",
+          "port": 2408,
+          "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+          "allowed_ips": [
+            "0.0.0.0/0",
+			"::"
+          ]
+        }
+      ],
+      "udp_timeout": "5m"
     }
   ]
 }
