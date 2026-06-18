@@ -343,7 +343,7 @@ generate_config() {
       "type": "direct",
       "tag": "direct",
     }
-  ]，
+  ],
   "route": {
     "rules": [
       {
