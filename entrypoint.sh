@@ -338,40 +338,10 @@ generate_config() {
       }
       }
   ],
-  ###// "outbounds": [
-    {
-      "type": "direct",
-      "tag": "direct",
-    }
-  ],
+  "outbounds": [],
   "route": {
-    "rules": [
-      {
-        "domain_suffix": [
-          "example"
-        ],
-        "ip_version": 4,
-        "network": [
-          "tcp",
-          "udp"
-        ],
-        "action": "route",
-        "invert": true,
-        "outbound": "wg-ep"
-      },
-      {
-        "domain_suffix": [
-          "example"
-        ],
-        "ip_version": 6,
-        "network": [
-          "tcp",
-          "udp"
-        ],
-        "action": "route",
-        "outbound": "wg-ep"
-      }
-    ]
+    "rules": [],
+    "final": "wg-ep"
   },
   "endpoints": [
     {
