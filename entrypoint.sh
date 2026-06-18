@@ -381,7 +381,8 @@ generate_config() {
       "name": "wg0",
       "mtu": 1280,
       "address": [
-        "172.16.0.2/32"
+        "172.16.0.2/32",
+		"2606:4700:110:8e62:2f62:eb69:3d97:c6a5/128"
       ],
       "private_key": "wBBUpigxbXdv8NGRLHD0BnMfBhHlfujf9s8/BG8BLVo=",
       "peers": [
