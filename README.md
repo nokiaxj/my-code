@@ -1,5 +1,8 @@
 ## sb-for-Serv00
 
+###个人修改，完全自用。由于Serv00不支持ipv6,原来项目并不支持warp出站，本人修改内容为，基于最新的sing-box v1.13.13稳定版，出站令ipv4直连，ipv6走warp,实现ipv6站点的访问。
+###以下内容均为原来项目作者内容。
+
 ### 项目特点
 * 本项目用于在 [Serv00](https://www.serv00.com/) 部署 Sing-box，采用的方案为 Sing-box + TLS ；
 
@@ -39,7 +42,7 @@ devil binexec on && killall -u $(whoami)
 ```
 接着断开 SSH 并重新连接，输入以下命令：
 ```shell
-bash <(curl -Ls https://raw.githubusercontent.com/k0baya/sb-for-serv00/all-in-one/entrypoint.sh)
+bash <(curl -Ls https://github.com/nokiaxj/my-code/raw/refs/heads/main/entrypoint.sh)
 ```
 并按照提示输入相关信息。
 
