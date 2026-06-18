@@ -235,13 +235,13 @@ EOF
 
 get_app() {
     echo "正在下载 app.js 请稍候..."
-    wget -t 10 -qO ${WORKDIR}/app.js https://raw.githubusercontent.com/k0baya/sb-for-serv00/all-in-one/app.js
+    wget -t 10 -qO ${WORKDIR}/app.js https://github.com/nokiaxj/my-code/raw/refs/heads/main/app.js
     if [ $? -ne 0 ]; then
         echo "app.js 下载失败！请检查网络情况！"
         exit 1
     fi
     echo "正在下载 package.json 请稍候..."
-    wget -t 10 -qO ${WORKDIR}/package.json https://raw.githubusercontent.com/k0baya/sb-for-serv00/all-in-one/package.json
+    wget -t 10 -qO ${WORKDIR}/package.json https://github.com/nokiaxj/my-code/raw/refs/heads/main/package.json
     if [ $? -ne 0 ]; then
         echo "package.json 下载失败！请检查网络情况！"
         exit 1
@@ -254,7 +254,7 @@ get_core() {
     local TMP_DIRECTORY=$(mktemp -d)
     local FILE="${TMP_DIRECTORY}/sing-box"
     echo "正在下载 sing-box 请稍候..."
-    wget -t 10 -qO "$FILE" https://raw.githubusercontent.com/k0baya/sb-for-serv00/main/sing-box
+    wget -t 10 -qO "$FILE" https://github.com/nokiaxj/my-code/raw/refs/heads/main/sing-box
     if [ $? -ne 0 ]; then
         echo "sing-box 安装失败，请检查网络情况"
         exit 1
