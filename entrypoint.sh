@@ -357,7 +357,7 @@ generate_config() {
         ],
         "action": "route",
         "invert": true,
-        "outbound": "wg-ep"
+        "outbound": "direct"
       },
       {
         "domain_suffix": [
@@ -387,7 +387,7 @@ generate_config() {
       "private_key": "wBBUpigxbXdv8NGRLHD0BnMfBhHlfujf9s8/BG8BLVo=",
       "peers": [
         {
-          "address": "162.159.192.1",
+          "address": "engage.cloudflareclient.com",
           "port": 2408,
           "public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
           "allowed_ips": [
