@@ -338,26 +338,11 @@ generate_config() {
       }
       }
   ],
-  "outbounds": [
-    {
-      "type": "direct",
-      "tag": "direct"
-    }
-  ],
   "route": {
     "rules": [
 	     {
         "ip_version": 6,
         "outbound": "wg-out",
-        "inbound": [
-          "hy2-sb",
-          "tuic5-sb",
-          "vl-sb"
-        ]
-      },
-	   {
-        "ip_version": 4,
-        "outbound": "direct",
         "inbound": [
           "hy2-sb",
           "tuic5-sb",
