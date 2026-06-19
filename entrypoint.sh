@@ -338,17 +338,39 @@ generate_config() {
       }
       }
   ],
-  "outbounds": [],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
   "route": {
-    "rules": [],
-    "final": "wg-ep"
+    "rules": [
+	     {
+        "ip_version": 6,
+        "outbound": "wg-out",
+        "inbound": [
+          "hy2-sb",
+          "tuic5-sb",
+          "vl-sb"
+        ]
+      },
+	   {
+        "ip_version": 4,
+        "outbound": "direct",
+        "inbound": [
+          "hy2-sb",
+          "tuic5-sb",
+          "vl-sb"
+        ]
+      }
+	]
   },
   "endpoints": [
     {
       "type": "wireguard",
-      "tag": "wg-ep",
+      "tag": "wg-out",
       "system": false,
-      "name": "wg0",
       "mtu": 1280,
       "address": [
         "172.16.0.2/32",
